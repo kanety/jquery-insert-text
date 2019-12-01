@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="dist/jquery-insert-text.js"></script>
+</head>
+<body>
+  <h1>Basic use</h1>
+  <textarea id="basic" style="width: 50%; height: 5em;">sample text</textarea>
+  <div>
+    <button type="button" id="basic_caret">Insert at caret</button>
+    <button type="button" id="basic_first">Insert at first</button>
+    <button type="button" id="basic_last">Insert at last</button>
+    <button type="button" id="basic_specified">Insert at specified position</button>
+  </div>
+  <script>
+  $('#basic_caret').on('click', function(e) {
+    $('#basic').insertText('INSERTED');
+  });
+  $('#basic_first').on('click', function(e) {
+    $('#basic').insertText('INSERTED', 'first');
+  });
+  $('#basic_last').on('click', function(e) {
+    $('#basic').insertText('INSERTED', 'last');
+  });
+  $('#basic_specified').on('click', function(e) {
+    $('#basic').insertText('INSERTED', 6);
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+{
+  "name": "@kanety/jquery-insert-text",
+  "version": "0.1.0",
+  "main": "dist/jquery-insert-text.js",
+  "author": "Yoshikazu Kaneta <kaneta@sitebridge.co.jp>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kanety/jquery-insert-text.git"
+  },
+  "keywords": [
+    "jquery",
+    "jquery-plugin",
+    "insert text"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --mode development",
+    "watch": "webpack --mode development --watch",
+    "build": "webpack --mode production",
+    "test": "karma start"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "babel-loader": "^8.0.4",
+    "istanbul-instrumenter-loader": "^3.0.1",
+    "karma": "^4.1.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage": "^1.1.2",
+    "karma-coverage-istanbul-reporter": "^2.0.5",
+    "karma-edge-launcher": "^0.4.2",
+    "karma-firefox-launcher": "^1.2.0",
+    "karma-html2js-preprocessor": "^1.1.0",
+    "karma-ie-launcher": "^1.0.0",
+    "karma-jasmine": "^2.0.1",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^4.0.2",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1"
+  }
+}
