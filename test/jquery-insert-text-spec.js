@@ -31,5 +31,40 @@ describe('jquery-insert-text', () => {
       $('#basic_specified').click();
       expect($textarea.val()).toEqual('sampleINSERTED text');
     });
-});
+  });
+
+  describe('contenteditable', () => {
+    let $elem;
+
+    beforeEach(() => {
+      $elem = $('#editable');
+    });
+
+    it('at caret', () => {
+      let $select = $elem.contents().filter((i, elem) => elem.nodeType == 3).last()
+      let selection = document.getSelection();
+      let range = document.createRange();
+      range.setStart($select[0], 1);
+      range.setEnd($select[0], 5);
+      selection.removeAllRanges();
+      selection.addRange(range);
+      $('#editable_caret').click();
+      expect($elem.text()).toEqual('sample INSERTED');
+    });
+
+    it('at first', () => {
+      $('#editable_first').click();
+      expect($elem.text()).toEqual('INSERTEDsample text');
+    });
+
+    it('at last', () => {
+      $('#editable_last').click();
+      expect($elem.text()).toEqual('sample textINSERTED');
+    });
+
+    it('at specified position', () => {
+      $('#editable_specified').click();
+      expect($elem.text()).toEqual('sampleINSERTED text');
+    });
+  });
 });

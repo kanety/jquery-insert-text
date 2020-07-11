@@ -28,5 +28,27 @@
     $('#basic').insertText('INSERTED', 6);
   });
   </script>
+  <h1>Contenteditable</h1>
+  <div id="editable" contenteditable="true"><b class="bold">sample</b> text</div>
+  <div>
+    <button type="button" id="editable_caret">Insert at caret</button>
+    <button type="button" id="editable_first">Insert at first</button>
+    <button type="button" id="editable_last">Insert at last</button>
+    <button type="button" id="editable_specified">Insert at specified position</button>
+  </div>
+  <script>
+  $('#editable_caret').on('click', function(e) {
+    $('#editable').insertText('<i>INSERTED</i>');
+  });
+  $('#editable_first').on('click', function(e) {
+    $('#editable').insertText('<i>INSERTED</i>', 'first');
+  });
+  $('#editable_last').on('click', function(e) {
+    $('#editable').insertText('<i>INSERTED</i>', 'last');
+  });
+  $('#editable_specified').on('click', function(e) {
+    $('#editable').insertText('<i>INSERTED</i>', { selector: '.bold', position: 6 });
+  });
+  </script>
 </body>
 </html>
