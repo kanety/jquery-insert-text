@@ -1,6 +1,6 @@
 # jquery-insert-text
 
-Insert text to input field.
+Insert text to input or editable element.
 
 ## Dependencies
 
@@ -14,12 +14,30 @@ Install from npm:
 
 ## Usage
 
+Insert text at caret position of `<textarea>` or `contenteditable` elements:
+
 ```html
 <textarea>sample text</textarea>
+<div contenteditable="true">sample text</div>
 ```
 
 ```javascript
-$('textarea').insertText('INSERTED');
+$('textarea').insertText('YOUR TEXT');
+$('div[contenteditable]').insertText('YOUR TEXT');
+```
+
+### Options
+
+Insert text at first position:
+
+```javascript
+$('textarea').insertText('YOUR TEXT', 'first');
+```
+
+Insert text at last position:
+
+```javascript
+$('textarea').insertText('YOUR TEXT', 'last');
 ```
 
 ## License

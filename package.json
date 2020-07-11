@@ -1,7 +1,7 @@
 {
   "name": "@kanety/jquery-insert-text",
-  "description": "Insert text to input field",
-  "version": "0.1.0",
+  "description": "Insert text to input or editable element",
+  "version": "0.2.0",
   "main": "dist/jquery-insert-text.js",
   "author": "Yoshikazu Kaneta <kaneta@sitebridge.co.jp>",
   "repository": {
